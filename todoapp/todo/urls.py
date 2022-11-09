@@ -1,8 +1,8 @@
 from rest_framework import routers
 from .api import TodoViewSet
 
-routers.DefaultRouter()
+router = routers.DefaultRouter()
 
-routers.register('api/todo', TodoViewSet, 'todo')
+router.register('api/todo', TodoViewSet, 'todo')
 
-urlpatterns = routers.urls
+urlpatterns = router.urls
